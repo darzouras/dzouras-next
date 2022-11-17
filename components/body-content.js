@@ -1,4 +1,5 @@
 import {PortableText} from '@portabletext/react'
+import Title from '../components/title'
 
 const ptComponents = {
   types: {
@@ -17,7 +18,6 @@ const ptComponents = {
   },
   marks: {
     small: ({children}) => {
-      console.log('hello? small?')
       return <small>{children}</small>
     }
   }
@@ -25,7 +25,7 @@ const ptComponents = {
 
 export default function BodyContent(props) {
   const { body } = props
-  console.log(body)
+  // console.log(body)
   
   if (!Array.isArray(body)) {
     console.error('Body content is not an array')
@@ -35,7 +35,7 @@ export default function BodyContent(props) {
   return body.map((section) => {
     switch (section._type) {
       case 'title':
-        return <h1 key={section._key}>{section.title}</h1>
+        return <Title key={section._key} title={section.title} tag={section.tag} tagStyle={section.style} />
       case 'bodyContent':
         return <PortableText key={section._key} value={section.body} components={ptComponents} />
     }

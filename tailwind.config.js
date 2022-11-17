@@ -1,4 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+const typoSafelist = [
+  'text-xl',
+  'text-lg',
+  'font-bold'
+]
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -9,4 +15,7 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  safelist: [
+    ...typoSafelist
+  ]
 }

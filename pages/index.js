@@ -2,8 +2,7 @@ import client from '../client'
 import BodyContent from '../components/body-content'
 
 const Index = ({page}) => {
-  const { title, body } = page
-  console.log(page)
+  const { body } = page
   return (
     <div>
       <BodyContent body={body} />

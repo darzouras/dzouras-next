@@ -2,14 +2,12 @@ import client from '../client'
 import BodyContent from '../components/body-content'
 
 const Page = ({page}) => {
-  const { title, body } = page
+  const { body } = page || ''
 
   return (
-    <article>
-      <h1>{page?.slug?.current}</h1>
-      <div>{title}</div>
-      <BodyContent body={body} />
-    </article>
+    <div>
+      {body && <BodyContent body={body} />}
+    </div>
   )
 }
 

@@ -3,14 +3,10 @@ import BodyContent from '../components/body-content'
 
 const Index = ({page}) => {
   const { body } = page
-  return (
-    <div>
-      <BodyContent body={body} />
-    </div>
-  )
+  return <BodyContent body={body} />
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   // It's important to default the slug so that it doesn't return "undefined"
   const page = await client.fetch(`*[_type == "page" && slug.current == "home"][0]`)
   return {

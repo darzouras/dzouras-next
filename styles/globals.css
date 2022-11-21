@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  src: url('../fonts/FantasqueSansMono-Regular.woff2');
+  font-family: "Fantasque Sans Mono";
+  font-style: normal;
+}
+@font-face {
+  src: url('../fonts/FantasqueSansMono-Italic.woff2');
+  font-family: "Fantasque Sans Mono";
+  font-style: italic;
+}
+@font-face {
+  src: url('../fonts/FantasqueSansMono-Bold.woff2');
+  font-family: "Fantasque Sans Mono";
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  src: url('../fonts/FantasqueSansMono-BoldItalic.woff2');
+  font-family: "Fantasque Sans Mono";
+  font-style: italic;
+  font-weight: bold;
+}
+
+html {
+  font-family: "Fantasque Sans Mono", monospace;
+}

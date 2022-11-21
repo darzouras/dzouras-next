@@ -12,7 +12,15 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'olive': '#4e5021',
+        'bubblegum': '#f298bf',
+        'goldenrod': '#fccc13',
+        'khaki': '#e2d6a4',
+        'beige': '#e6dbce'
+      }
+    },
   },
   plugins: [],
   safelist: [

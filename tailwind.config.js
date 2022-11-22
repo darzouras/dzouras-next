@@ -14,11 +14,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'olive': '#4e5021',
-        'bubblegum': '#f298bf',
-        'goldenrod': '#fccc13',
-        'khaki': '#e2d6a4',
-        'beige': '#e6dbce'
+        'plum': '#310a31',
+        'violet': '#847996',
+        'lake': '#88b7b5',
+        'swamp': '#a7cab1',
+        'sand': '#f4ecd6'
       }
     },
   },

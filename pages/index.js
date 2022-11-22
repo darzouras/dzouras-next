@@ -7,7 +7,7 @@ const Index = ({globalData, page}) => {
   return (
     <>
       <Head>
-        <title>{globalData.siteName} | {page.title}</title>
+        <title>{`${globalData.siteName} | ${page.title}`}</title>
       </Head>
       <BodyContent body={body} />
     </>

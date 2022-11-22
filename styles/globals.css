@@ -28,3 +28,10 @@
 html {
   font-family: "Fantasque Sans Mono", monospace;
 }
+
+main a {
+  text-decoration: underline;
+}
+main a:hover {
+  text-decoration: none;
+}

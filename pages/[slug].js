@@ -1,13 +1,17 @@
+import Head from 'next/head'
 import client from '../client'
 import BodyContent from '../components/body-content'
 
-const Page = ({page}) => {
+const Page = ({globalData, page}) => {
   const { body } = page || ''
 
   return (
-    <div>
+    <>
+      <Head>
+        <title>{globalData.siteName} | {page.title}</title>
+      </Head>
       {body && <BodyContent body={body} />}
-    </div>
+    </>
   )
 }
 

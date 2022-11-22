@@ -1,9 +1,17 @@
+import Head from 'next/head'
 import client from '../client'
 import BodyContent from '../components/body-content'
 
-const Index = ({page}) => {
+const Index = ({globalData, page}) => {
   const { body } = page
-  return <BodyContent body={body} />
+  return (
+    <>
+      <Head>
+        <title>{globalData.siteName} | {page.title}</title>
+      </Head>
+      <BodyContent body={body} />
+    </>
+  )
 }
 
 export async function getStaticProps() {

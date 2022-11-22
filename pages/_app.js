@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 const MyApp = ({ Component, pageProps, globalData }) => {
   return (
     <Layout globalData={globalData}>
-      <Component {...pageProps} />
+      <Component {...pageProps} globalData={globalData} />
     </Layout>
   )
 }

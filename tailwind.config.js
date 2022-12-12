@@ -9,7 +9,11 @@ const typoSafelist = [
   'py-2',
   'border-violet',
   'bg-sand',
-  'py-4'
+  'py-4',
+  'bg-swamp',
+  'text-plum',
+  'bg-violet',
+  'font-normal'
 ]
 
 module.exports = {

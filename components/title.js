@@ -3,9 +3,9 @@ const Title = ({ title, tag, tagStyle }) => {
 
   switch (tagStyle) {
     case 'headline':
-      tagStyle = 'text-xl font-bold'
-    case 'hubheadline':
-      tagStyle = 'text-lg font-bold'
+      tagStyle = 'text-xl font-normal'
+    case 'subheadline':
+      tagStyle = 'text-lg font-normal'
   }
 
   return (

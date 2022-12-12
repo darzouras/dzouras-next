@@ -2,7 +2,14 @@
 const typoSafelist = [
   'text-xl',
   'text-lg',
-  'font-bold'
+  'font-bold',
+  'border-plum',
+  'bg-plum',
+  'text-sand',
+  'py-2',
+  'border-violet',
+  'bg-sand',
+  'py-4'
 ]
 
 module.exports = {

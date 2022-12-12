@@ -42,3 +42,13 @@ main a:hover {
 .body-content *:last-child {
   margin-bottom: 0;
 }
+
+@media (min-width: 768px) {
+  .main-window::-webkit-scrollbar {
+    display: none;
+  }
+  .main-window {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}

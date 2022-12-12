@@ -2,6 +2,12 @@ import Head from 'next/head'
 import client from '../../client'
 import RichtextWrapper from '../../components/richtext-wrapper'
 import Title from '../../components/title'
+import BubbleBorder from '../../components/bubble-border'
+
+const publishDate = (date) => {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' }
+  return new Date(date).toLocaleDateString('en-US', options)
+}
 
 const Page = ({globalData, post}) => {
   const { body } = post || ''
@@ -11,11 +17,16 @@ const Page = ({globalData, post}) => {
       <Head>
         <title>{post && `${globalData.siteName} Blog | ${post.title}`}</title>
       </Head>
-      <div className="border-2 rounded-md mb-4 px-4 border-plum bg-plum text-sand py-2">
+      <BubbleBorder styleType="title">
         <Title tag="h1" tagStyle="headline" title={post?.title} />
-      </div>
+      </BubbleBorder>
+      { post && 
+        <p className="text-plum mb-4 text-center">Posted on { publishDate(post?.publishedAt) }</p>
+      }
       { body &&
-        <RichtextWrapper body={body} />
+        <BubbleBorder styleType="body">
+          <RichtextWrapper body={body} />
+        </BubbleBorder>
       }
     </>
   )

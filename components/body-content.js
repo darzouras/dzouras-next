@@ -1,5 +1,6 @@
 import Title from '../components/title'
 import RichtextWrapper from '../components/richtext-wrapper'
+import BubbleBorder from '../components/bubble-border.js'
 
 export default function BodyContent(props) {
   const { body } = props
@@ -16,15 +17,15 @@ export default function BodyContent(props) {
       switch (section._type) {
         case 'title':
           return (
-            <div className={`${sectionClasses} border-plum bg-plum text-sand py-2`} key={index}>
+            <BubbleBorder styleType='title' key={index}>
               <Title key={section._key} title={section.title} tag={section.tag} tagStyle={section.style} />
-            </div>
+            </BubbleBorder>
           )
         case 'bodyContent':
           return (
-            <div className={`body-content ${sectionClasses} border-violet bg-sand py-4`} key={index}>
+            <BubbleBorder styleType='body' key={index}>
               <RichtextWrapper key={section._key} body={section.body} />
-            </div>
+            </BubbleBorder>
           )
       }
     })

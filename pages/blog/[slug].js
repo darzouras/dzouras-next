@@ -12,7 +12,7 @@ const Page = ({globalData, post}) => {
         <title>{post && `${globalData.siteName} Blog | ${post.title}`}</title>
       </Head>
       <div className="border-2 rounded-md mb-4 px-4 border-plum bg-plum text-sand py-2">
-        <Title tag="h1" tagStyle="headline" title={post.title} />
+        <Title tag="h1" tagStyle="headline" title={post?.title} />
       </div>
       { body &&
         <RichtextWrapper body={body} />

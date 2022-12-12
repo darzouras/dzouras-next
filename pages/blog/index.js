@@ -10,8 +10,8 @@ const BlogIndex = ({globalData, page, posts}) => {
         <title>{`${globalData.siteName} | ${page.title}`}</title>
       </Head>
       <BodyContent body={body} />
-      { posts !== undefined &&
-        <ul posts>
+      { posts &&
+        <ul>
           {posts.map((post) => {
             return (
               <li key={post._id}>

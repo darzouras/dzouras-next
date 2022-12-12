@@ -36,6 +36,7 @@ const BlogIndex = ({globalData, page, posts}) => {
       </Head>
       <BodyContent body={body} />
       <Posts posts={posts} />
+      <p>If you are looking for blog posts from 2019 - 2021, see <a href="https://darzouras-gridsome.netlify.app/blog">this previous version of my website</a>.</p>
     </>
   )
 }

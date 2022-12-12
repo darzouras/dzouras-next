@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import client from '../../client'
 import BodyContent from '../../components/body-content'
 
@@ -15,9 +16,9 @@ const Posts = ({ posts }) => {
     <ul>
       {posts.map((post) => {
         return (
-          <li key={post._id} className="mb-4">
+          <li key={post._id} className="border-2 rounded-md mb-4 px-4 border-violet bg-sand py-4">
             <strong className="text-lake">{ publishDate(post.publishedAt) }</strong><br />
-            <a href={`/blog/${post.slug.current}`}>{post.title}</a>
+            <Link href={`/blog/${post.slug.current}`}>{post.title}</Link>
           </li>
         )
       })}

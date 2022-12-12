@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import client from '../../client'
 import RichtextWrapper from '../../components/richtext-wrapper'
+import Title from '../../components/title'
 
 const Page = ({globalData, post}) => {
   const { body } = post || ''
@@ -8,8 +9,11 @@ const Page = ({globalData, post}) => {
   return (
     <>
       <Head>
-      <title>{post && `${globalData.siteName} Blog | ${post.title}`}</title>
+        <title>{post && `${globalData.siteName} Blog | ${post.title}`}</title>
       </Head>
+      <div className="border-2 rounded-md mb-4 px-4 border-plum bg-plum text-sand py-2">
+        <Title tag="h1" tagStyle="headline" title={post.title} />
+      </div>
       { body &&
         <RichtextWrapper body={body} />
       }

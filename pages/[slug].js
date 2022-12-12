@@ -8,7 +8,7 @@ const Page = ({globalData, page}) => {
   return (
     <>
       <Head>
-      <title>{page && `${globalData.siteName} | ${page.title}`}</title>
+        <title>{page && `${globalData.siteName} | ${page.title}`}</title>
       </Head>
       {body && <BodyContent body={body} />}
     </>

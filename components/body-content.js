@@ -1,28 +1,5 @@
-import {PortableText} from '@portabletext/react'
 import Title from '../components/title'
-
-const ptComponents = {
-  types: {
-    image: ({ value }) => {
-      if (!value?.asset?._ref) {
-        return null
-      }
-      return (
-        <img
-          alt={value.alt || ' '}
-          loading="lazy"
-          src={urlFor(value).width(320).height(240).fit('max').auto('format')}
-          className="max-w-full"
-        />
-      )
-    }
-  },
-  marks: {
-    small: ({children}) => {
-      return <small>{children}</small>
-    }
-  }
-}
+import RichtextWrapper from '../components/richtext-wrapper'
 
 export default function BodyContent(props) {
   const { body } = props
@@ -46,7 +23,7 @@ export default function BodyContent(props) {
         case 'bodyContent':
           return (
             <div className={`body-content ${sectionClasses} border-violet bg-sand py-4`} key={index}>
-              <PortableText key={section._key} value={section.body} components={ptComponents} />
+              <RichtextWrapper key={section._key} body={section.body} />
             </div>
           )
       }

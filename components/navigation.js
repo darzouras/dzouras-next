@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Navigation = ({ navLinks }) => {
   return (
-    <nav className='border-2 rounded-md border-violet text-violet bg-sand inline-block mb-4 md:mb-0'>
+    <nav className='border-2 rounded-md border-violet text-violet bg-sand inline-block mb-4 md:mb-0 dark:border-swamp dark:bg-plum dark:text-sand'>
       <ul className='p-2 flex gap-3 md:flex-col'>
         {navLinks.map((link) => {
           return (

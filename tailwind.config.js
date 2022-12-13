@@ -1,19 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 const typoSafelist = [
+  'dark',
   'text-xl',
   'text-lg',
   'font-bold',
-  'border-plum',
-  'bg-plum',
-  'text-sand',
-  'py-2',
-  'border-violet',
-  'bg-sand',
-  'py-4',
-  'bg-swamp',
+  'font-normal',
   'text-plum',
+  'text-sand',
+  'text-violet',
+  'border-plum',
+  'border-sand',
+  'border-swamp',
+  'border-violet',
+  'bg-plum',
+  'bg-sand',
+  'bg-swamp',
   'bg-violet',
-  'font-normal'
+  'py-2',
+  'py-4',
 ]
 
 module.exports = {
@@ -22,6 +26,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {

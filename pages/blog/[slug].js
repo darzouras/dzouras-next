@@ -21,7 +21,7 @@ const Page = ({globalData, post}) => {
         <Title tag="h1" tagStyle="headline" title={post?.title} />
       </BubbleBorder>
       { post && 
-        <p className="text-plum mb-4 text-center">Posted on { publishDate(post?.publishedAt) }</p>
+        <p className="text-plum mb-4 text-center dark:text-swamp">Posted on { publishDate(post?.publishedAt) }</p>
       }
       { body &&
         <BubbleBorder styleType="body">

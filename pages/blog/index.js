@@ -16,7 +16,7 @@ const Posts = ({ posts }) => {
     <ul>
       {posts.map((post) => {
         return (
-          <li key={post._id} className="border-2 rounded-md mb-4 px-4 border-violet bg-sand py-4">
+          <li key={post._id} className="border-2 rounded-md mb-4 px-4 border-violet bg-sand py-4 dark:bg-black">
             <p className="text-violet">{ publishDate(post.publishedAt) }</p>
             <Link href={`/blog/${post.slug.current}`}>{post.title}</Link>
           </li>

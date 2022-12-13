@@ -1,12 +1,15 @@
+import { ThemeProvider } from '../context/theme'
 import client from '../client'
-import '../styles/globals.css'
 import Layout from '../components/layout'
+import '../styles/globals.css'
 
 const MyApp = ({ Component, pageProps, globalData }) => {
   return (
-    <Layout globalData={globalData}>
-      <Component {...pageProps} globalData={globalData} />
-    </Layout>
+    <ThemeProvider>
+      <Layout globalData={globalData}>
+        <Component {...pageProps} globalData={globalData} />
+      </Layout>
+    </ThemeProvider>
   )
 }
 

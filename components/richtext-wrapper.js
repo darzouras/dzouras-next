@@ -1,4 +1,14 @@
 import { PortableText } from '@portabletext/react'
+import imageUrlBuilder from '@sanity/image-url'
+
+const builder = imageUrlBuilder({
+  projectId: 'o1olwwub',
+  dataset: 'production'
+})
+
+function urlFor(source) {
+  return builder.image(source)
+}
 
 const ptComponents = {
   types: {
@@ -10,8 +20,8 @@ const ptComponents = {
         <img
           alt={value.alt || ' '}
           loading="lazy"
-          src={urlFor(value).width(320).height(240).fit('max').auto('format')}
-          className="max-w-full"
+          src={urlFor(value).fit('max').auto('format')}
+          className="max-w-full mb-4 max-h-96 rounded-md border-2 border-violet dark:border-sand"
         />
       )
     }

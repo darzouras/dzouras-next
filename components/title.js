@@ -1,15 +1,21 @@
 const Title = ({ title, tag, tagStyle }) => {
+  console.log('tagStyle', tagStyle)
   const Tag = tag || 'h2';
+
+  let styleClasses = 'text-xl font-normal'
 
   switch (tagStyle) {
     case 'headline':
-      tagStyle = 'text-xl font-normal'
+      styleClasses = 'text-xl font-normal'
+      break
     case 'subheadline':
-      tagStyle = 'text-lg font-normal'
+      styleClasses = 'text-lg font-normal'
+      break
   }
+  console.log('styleClasses', styleClasses)
 
   return (
-    <Tag className={tagStyle}>{title}</Tag>
+    <Tag className={styleClasses}>{title}</Tag>
   );
 }
 

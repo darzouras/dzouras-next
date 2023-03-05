@@ -1,5 +1,4 @@
 const Title = ({ title, tag, tagStyle }) => {
-  console.log('tagStyle', tagStyle)
   const Tag = tag || 'h2';
 
   let styleClasses = 'text-xl font-normal'
@@ -12,7 +11,6 @@ const Title = ({ title, tag, tagStyle }) => {
       styleClasses = 'text-lg font-normal'
       break
   }
-  console.log('styleClasses', styleClasses)
 
   return (
     <Tag className={styleClasses}>{title}</Tag>

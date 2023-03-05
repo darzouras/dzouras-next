@@ -35,6 +35,9 @@ module.exports = {
         'lake': '#88b7b5',
         'swamp': '#a7cab1',
         'sand': '#f4ecd6'
+      },
+      maxWidth: {
+        'lg-max': '666px'
       }
     },
   },

@@ -11,7 +11,7 @@ const getExtraStyles = (styleType) => {
 const BubbleBorder = ({ children, styleType }) => {
   let extraStyles = getExtraStyles(styleType)
   return (
-    <div className={`border-2 rounded-md mb-4 px-4 ${extraStyles}`}>
+    <div className={`mb-4 px-4 ${extraStyles}`}>
       { children }
     </div>
   )

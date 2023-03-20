@@ -11,7 +11,7 @@ const Layout = ({ children, globalData }) => {
           {children}
         </main>
 
-        <div className="fixed z-1 bottom-0 right-0 mb-2 mr-2 bg-sand border-2 border-violet rounded-full p-2 leading-none flex items-center justify-center">
+        <div className="fixed z-1 bottom-0 right-0 mb-2 mr-2 bg-sand border-2 border-violet rounded-full p-2 leading-none flex items-center justify-center opacity-0">
           <button
             className="bg-sand bg-opacity-0 border-0 p-0 m-0"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}

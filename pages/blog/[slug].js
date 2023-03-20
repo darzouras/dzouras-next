@@ -17,7 +17,7 @@ const Page = ({globalData, post}) => {
       <Head>
         <title>{post && `${globalData.siteName} Blog | ${post.title}`}</title>
       </Head>
-      <BubbleBorder styleType="title">
+      <BubbleBorder styleType="title_h1">
         <Title tag="h1" tagStyle="headline" title={post?.title} />
       </BubbleBorder>
       { post && 

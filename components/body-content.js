@@ -12,12 +12,21 @@ export default function BodyContent(props) {
     return null
   }
 
+  const getTitleStyle = (tag, style) => {
+    if (tag === 'h1') {
+      return 'title_h1'
+    }
+    else {
+      return 'title_' + style
+    }
+  }
+
   return (
     body.map((section, index) => {
       switch (section._type) {
         case 'title':
           return (
-            <BubbleBorder styleType='title' key={index}>
+            <BubbleBorder styleType={getTitleStyle(section.tag, section.style)} key={index}>
               <Title key={section._key} title={section.title} tag={section.tag} tagStyle={section.style} />
             </BubbleBorder>
           )
